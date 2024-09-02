@@ -1,0 +1,31 @@
+Total objects created = 10 lakh
+
+int coordinateX; // 4 byte
+int coordinateY; // 4 byte
+String type;     // 50 byte
+Sprites body;    // small 2d bitmap (graphic element) --> 30 kb
+
+For 1 object ~ 31kb approx
+For 10 lakh object = 31 * 10 lakh = 31 GD
+
+If your interface has 20 GB, so it will crash
+
+
+--------------------------------------------------------
+
+Observe and understand, when to use the Flyweight patten
+
+- When memory is limited
+- When objects shares data
+    Intrinsic data: shared among objects and remain same once defined one value.
+    - Like in above example: Type and Body is Instrinsic data.
+    Extrinsic data: change based on client input and differs from one object to another.
+    - Like in above example: X and Y axis are Extrinsic data
+- Creation of object is expensive
+
+
+How it solves the issue?
+
+- From Object, remove all the Extrinsic data and keep only Intrinsic data (this object is called Flyweight Object)
+- Extrinsic data can be passed in the parameter to the Flyweight class.
+- Caching can be used for the Flyweight object and reused whenever required

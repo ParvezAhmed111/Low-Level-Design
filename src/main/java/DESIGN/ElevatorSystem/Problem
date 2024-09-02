@@ -1,0 +1,28 @@
+Design Elevator System
+Asked in: AMAZON
+
+------------Request Clarification------------
+1. How many lifts should we consider?
+2. If more than one lift, which list to dispatch
+    - Lift dispatch algorithms (it should be dynamic to use any of these algorithms
+        - odd/even
+        - fixed floor
+        - minimum seek time . . .
+
+
+
+------------Objects required------------
+1. Building
+2. Floor
+3. ExternalButton
+5. ElevatorCar
+    a. Display
+    b. CurrentFloor
+    c. Direction <<enum>>
+        - UP
+        - DOWN
+    d. Status <<enum>>
+        - MOVING
+        - IDLE
+    e. InternalButton
+    f. Doors
